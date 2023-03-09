@@ -8,7 +8,7 @@ export function getSubscribers() {
   let totalRecords: any = []
 
   return new Promise((resolve, reject) => {
-    base('Waitlist')
+    base('Subscribers')
       .select({
         maxRecords: 1000, // can set max records if you want to limit
         pageSize: 100,

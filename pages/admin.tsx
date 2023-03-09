@@ -15,7 +15,7 @@ function AdminPage({ subscribers }: Props) {
         <ul className='space-y-2'>
           {subscribers.map((subscriber: any) => (
             <li
-              key={subscriber.id}
+              key={subscriber.email}
               className='list-decimal list-inside text-sm sm:text-base'
             >
               {subscriber.email}
