@@ -1,11 +1,8 @@
 import { useState } from 'react'
+import { classNames } from '@/utils/helpers'
 
 function Subscribe({ setSubscribed }: { setSubscribed: any }) {
   const [clicked, setClicked] = useState(false)
-
-  function classNames(...classes: String[]) {
-    return classes.filter(Boolean).join(' ')
-  }
 
   async function handleSubmit(e: any) {
     e.preventDefault()
@@ -27,10 +24,7 @@ function Subscribe({ setSubscribed }: { setSubscribed: any }) {
       onSubmit={handleSubmit}
     >
       {' '}
-      <label
-        htmlFor='email'
-        className='sr-only'
-      >
+      <label htmlFor='email' className='sr-only'>
         Email
       </label>
       <input

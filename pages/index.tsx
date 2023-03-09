@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Subscribe from '../components/Subscribe'
+import Subscribe from '@/components/Subscribe'
 
 const Home: NextPage = () => {
   const [subscribed, setSubscribed] = useState(false)
