@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
 function Subscribe({ setSubscribed }: { setSubscribed: any }) {
-  const [email, setEmail] = useState('')
   const [clicked, setClicked] = useState(false)
 
   function classNames(...classes: String[]) {
@@ -11,7 +10,8 @@ function Subscribe({ setSubscribed }: { setSubscribed: any }) {
   async function handleSubmit(e: any) {
     e.preventDefault()
     setClicked(true)
-    await fetch('api/update-airtable', {
+    const email = e.target['email'].value
+    await fetch('api/subscribe', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -26,13 +26,20 @@ function Subscribe({ setSubscribed }: { setSubscribed: any }) {
       className='flex flex-shrink w-full mt-8 max-w-lg'
       onSubmit={handleSubmit}
     >
+      {' '}
+      <label
+        htmlFor='email'
+        className='sr-only'
+      >
+        Email
+      </label>
       <input
         className='border text-gray-600 px-3 border-r-0 border-purple-100 rounded-l-lg w-2/3
               focus:outline-none focus:ring-1 focus:ring-purple-600'
         type='email'
+        name='email'
         required
         placeholder='Your email here'
-        onChange={(e) => setEmail(e.target.value)}
       />
       <button
         type='submit'
