@@ -38,7 +38,7 @@ function Subscribe({ setSubscribed }: { setSubscribed: any }) {
       <button
         type='submit'
         className={classNames(
-          clicked ? 'pointer-events-none	opacity-75' : '',
+          clicked ? 'pointer-events-none opacity-75' : '',
           `py-3 px-4 bg-purple-600 hover:bg-purple-700 text-white text-sm sm:text-base font-semibold rounded-r-lg border border-transparent 
           focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600`
         )}
