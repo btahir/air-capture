@@ -6,7 +6,9 @@
 <img src="https://github.com/btahir/air-capture/blob/main/admin.png">
 </div>
 
-This is a demo of using Airtable to capture emails with a Next.js + Tailwind CSS app. 
+## Overview
+
+This is a demo of using Airtable to capture emails with a Next.js + Tailwind CSS app (used the vercel examples starter). 
 
 The flow is
 - User enters email
@@ -15,4 +17,17 @@ The flow is
 
 You can add an extra step in Airtable with an automation to send a confirmation email to the user that they are subscribed.
 
-<a href="https://twitter.com/deepwhitman">Follow me on Twitter</a>
+## Setup
+
+Create a .env.local file at the root of the project. Add these two variables with your credentials from Airtable:
+
+```
+AIRTABLE_ACCESS_TOKEN=
+AIRTABLE_BASE_ID=
+```
+
+You can start the project locally with the command
+
+```
+yarn && yarn dev
+```
