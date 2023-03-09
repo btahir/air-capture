@@ -2,7 +2,8 @@
 
 
 <div align="center">
-<img src="https://github.com/btahir/notion-capture/blob/main/public/images/demo.gif">
+<img src="https://github.com/btahir/air-capture/blob/main/landing.png">
+<img src="https://github.com/btahir/air-capture/blob/main/admin.png">
 </div>
 
 This is a demo of using Airtable to capture emails with a Next.js + Tailwind CSS app. 
